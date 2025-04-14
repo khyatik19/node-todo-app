@@ -6,7 +6,7 @@ pipeline{
                 checkout scm
             }
         }
-        stage('checkout'){
+        stage('docker image'){
             steps{
                 sh "docker build -t ${IMAGE_NAME}:latest ."
             }
